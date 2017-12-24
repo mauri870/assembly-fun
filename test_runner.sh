@@ -9,7 +9,7 @@ for DIR in $(ls -d $SRCDIR/*/)
 do
     PROGRAM=$(basename "$DIR")
     echo "Compiling $PROGRAM..."
-    make
+    PROGRAM="$PROGRAM" make
 
     echo "Running test for $PROGRAM..." 
     PATH="$(pwd)/bin:$PATH" bats "$TESTDIR/$PROGRAM.bats"

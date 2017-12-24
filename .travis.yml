@@ -2,8 +2,9 @@ dist: trusty
 sudo: true
 
 before_script:
+  - sudo add-apt-repository ppa:duggan/bats -y
   - sudo apt-get update -y
-  - sudo apt-get install -y make bats
+  - sudo apt-get install -y make yasm bats
 
 script:
   - ./test_runner.sh
