@@ -7,7 +7,9 @@ Some problems solved in assembly Linux x64
 ```bash
 yaourt -S yasm bash-bats
 # or
-apt-get install yasm bats
+sudo add-apt-repository ppa:duggan/bats
+sudo apt-get update
+sudo apt-get install make yasm bats
 ```
 
 ## Compilation
