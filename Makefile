@@ -26,7 +26,7 @@ $(PROGRAM): $(OBJS) $(BIN)
 # Rule to generate the given object file
 $(BUILD)%.o:
 	mkdir -p $(dir $@)
-	yasm -I src/ -f elf64 -o $@ src/$*.asm
+	yasm -I $(SRC) -f elf64 -o $@ src/$*.asm
 
 # Rule to create the binaries directory
 $(BIN):
