@@ -9,8 +9,7 @@ _start:
 	call 	sys_write
 
 	mov		rdi, 0
-	mov		rax, 60
-	syscall
+	call	sys_exit
 
 section .data
 msg 		db 'Hello World!',0xA
