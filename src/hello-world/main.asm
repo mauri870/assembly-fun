@@ -2,20 +2,17 @@
 ; A simple hello world program using the linux kernel system calls
 ;
 
-%include "syscall.asm"
+%include "io.asm"
 
 section .text
 global _start
 _start:
-	mov 	rdi, STDOUT
-	mov 	rsi, msg
-	mov 	rdx, msg_size
-	call 	sys_write
+    mov 	rdi, msg
+    call 	println
 
-	mov	rdi, 0
-	call	sys_exit
+    mov     rdi, 0
+    call    exit
 
 section .data
-msg 		db 'Hello World!',0xA
-msg_size 	equ $ - msg
+msg			db 'Hello World!', 0x0
 
