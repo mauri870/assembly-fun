@@ -8,7 +8,7 @@ _start:
 	mov 	rdx, msg_size
 	call 	sys_write
 
-	mov		rdi, 0
+	mov	rdi, 0
 	call	sys_exit
 
 section .data
