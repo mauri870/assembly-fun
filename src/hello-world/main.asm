@@ -1,3 +1,7 @@
+;
+; A simple hello world program using the linux kernel system calls
+;
+
 %include "syscall.asm"
 
 section .text
