@@ -1,5 +1,5 @@
 ;
-; A simple program to get the version of the current linux kernel
+; A simple program to get the version of the host's linux kernel
 ;
 
 %include "io.asm"
