@@ -15,7 +15,7 @@
 
     println:
         call    print
-        mov     rdi, LR
+        mov     rdi, LF
         call    print
         ret
 
@@ -37,6 +37,7 @@
         ret
 
     section .data
-        LR      db 0xA, 0x0
+        NULL:   equ 0x0
+        LF:     db 0xA, NULL
 
 %endif
