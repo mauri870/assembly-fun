@@ -1,19 +1,21 @@
 %ifndef STRINGS_ASM
     %define STRINGS_ASM
 
+    %include "io.asm"
+
     section .text
     strlen:
         push	rcx
         xor     rcx, rcx
-        
-        next$:
-        cmp     [rdi], byte 0
-        jz      null$
+
+        .next:
+        cmp     byte [rdi], NULL
+        jz      .null$
         inc     rcx
         inc     rdi
-        jmp     next$
+        jmp     .next
 
-        null$:
+        .null$:
         mov     rax, rcx
         pop     rcx
         ret
@@ -22,15 +24,59 @@
         mov     rsi, rdi
         call    strlen
         dec     rax
-        cmp     byte [rsi + rax], 0xA
-        jz      trim$
-        jmp     done$
+        mov     bl, [LF]
+        cmp     byte [rsi + rax], bl
+        jnz     .done
 
-        trim$:
-        mov     byte [rsi + rax], 0
-        
-        done$:
+        mov     byte [rsi + rax], NULL
+
+        .done:
         inc     rax
         ret
+
+    itoa:
+        enter   4, 0
+        mov     rax, rdi
+        lea     r8, [buf+10]
+        mov     rcx, 10
+        mov     [rbp-4], dword NULL
+
+        .loop:
+        xor     rdx, rdx
+        idiv    rcx
+        add     rdx, 0x30
+        dec     r8
+        mov     byte [r8], dl
+        inc     dword [rbp-4]
+
+        cmp     rax,0
+        jnz     .loop
+
+        mov     rax, r8
+        mov     rcx, [rbp-4]
+
+        leave
+        ret
+
+    atoi:
+        mov     rax, NULL
+        mov     rcx, 10
+
+        .loop:
+        mov     r8, [rdi]
+        cmp     r8, NULL
+        jz      .done
+
+        mul     rcx
+        sub     r8, 0x30
+        add     rax, r8
+        inc     rdi
+        jmp     .loop
+
+        .done:
+        ret
+
+    section .bss
+        buf     resb 10
 
 %endif
