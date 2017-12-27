@@ -5,19 +5,13 @@
 
     section .text
     strlen:
-        push	rcx
-        xor     rcx, rcx
+        mov     rax, NULL
+        mov     rcx, -1
+        cld
 
-        .next:
-        cmp     byte [rdi], NULL
-        jz      .null$
-        inc     rcx
-        inc     rdi
-        jmp     .next
-
-        .null$:
+        repne   scasb
+        not     rcx
         mov     rax, rcx
-        pop     rcx
         ret
 
     trimln:
