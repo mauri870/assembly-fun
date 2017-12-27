@@ -10,9 +10,9 @@ _start:
     mov 	rdi, msg
     call 	println
 
-    mov     rdi, 0
+    mov     rdi, NULL
     call    exit
 
 section .data
-msg			db 'Hello World!', 0x0
+msg			db 'Hello World!', NULL
 

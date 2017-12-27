@@ -22,7 +22,7 @@ _start:
 
 section .data
     len     equ 255
-    msg     db 'Hello ', 0x0
+    msg     db 'Hello ', NULL
 
 section .bss
     input   resb len
