@@ -1,4 +1,4 @@
 @test "should run Greeting" {
-    result="$(echo 'Assembly' | greeting)"
+    result="$(echo 'Assembly' | ./bin/greeting)"
     [ "$result" = "Hello Assembly" ]
 }

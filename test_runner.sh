@@ -12,7 +12,7 @@ do
     PROGRAM="$PROGRAM" make
 
     echo "Running test for $PROGRAM..." 
-    PATH="$(pwd)/bin:$PATH" bats "$TESTDIR/$PROGRAM.bats"
+    bats "$TESTDIR/$PROGRAM.bats"
 done
 
 make clean > /dev/null
