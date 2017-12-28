@@ -1,6 +1,8 @@
 ;
 ; A simple program to simulate the behavior of the GNU yes utility
 ;
+; ./bin/yes | pv -r /dev/null has the same performance as the coreutils yes on my machine
+;
 
 %include "syscall.asm"
 %include "io.asm"
