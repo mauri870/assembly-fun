@@ -7,6 +7,8 @@
 
     %define SYS_READ 0
     %define SYS_WRITE 1
+    %define SYS_OPEN 2
+    %define SYS_CLOSE 3
     %define SYS_EXIT 60
     %define SYS_UNAME 63
 
@@ -27,6 +29,16 @@
 
     sys_uname:
         mov     rax, SYS_UNAME
+        syscall
+        ret
+
+    sys_open:
+        mov     rax, SYS_OPEN
+        syscall
+        ret
+
+    sys_close:
+        mov     rax, SYS_CLOSE
         syscall
         ret
 
