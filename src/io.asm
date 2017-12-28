@@ -38,6 +38,7 @@
 
     section .data
         NULL:   equ 0x0
-        LF:     db 0xA, NULL
+        LN:     equ 0xA
+        LF:     db LN, NULL
 
 %endif
