@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 TESTDIR=tests
 SRCDIR=src
