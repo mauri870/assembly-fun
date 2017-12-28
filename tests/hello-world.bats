@@ -1,5 +1,5 @@
 @test "should run Hello World" {
-    run hello-world
+    run ./bin/hello-world
     [ "$status" -eq 0 ]
     [ "$output" = "Hello World!" ]
 }
