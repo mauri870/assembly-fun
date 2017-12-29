@@ -6,16 +6,26 @@
 
     section .text
     print:
+        cmp     rdi, NULL
+        jz      .ret
         mov     rsi, rdi
         call    strlen
         mov     rdx, rax
         mov     rdi, STDOUT
         call    sys_write
+
+        .ret:
         ret
 
     println:
         call    print
         mov     rdi, LF
+        call    print
+        ret
+
+    printInt:
+        call    itoa
+        mov     rdi, rax
         call    print
         ret
 
