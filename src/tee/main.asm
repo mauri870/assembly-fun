@@ -4,7 +4,6 @@
 
 %include "io.asm"
 %include "stat.asm"
-%include "syscall.asm"
 %include "strings.asm"
 
 %define BUF_SIZE 4096

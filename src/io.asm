@@ -3,6 +3,7 @@
 
     %include "syscall.asm"
     %include "strings.asm"
+    %include "stat.asm"
 
     section .text
     print:
@@ -12,7 +13,7 @@
         call    strlen
         mov     rdx, rax
         mov     rdi, STDOUT
-        call    sys_write
+        call    write
 
         .ret:
         ret

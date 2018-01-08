@@ -4,7 +4,7 @@
 ; ./bin/yes | pv -r /dev/null has the same performance as the coreutils yes on my machine
 ;
 
-%include "syscall.asm"
+%include "stat.asm"
 %include "io.asm"
 
 ; Buffer size needs to be page size aligned for better performance
@@ -18,7 +18,7 @@ _start:
     mov     rdx, BUF_SIZE * 2
 
     .loop:
-    call    sys_write
+    call    write
     jmp     .loop
 
 section .data

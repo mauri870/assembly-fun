@@ -4,7 +4,6 @@
 
 %include "io.asm"
 %include "stat.asm"
-%include "syscall.asm"
 
 %define BUF_SIZE 4096
 
@@ -32,7 +31,7 @@ _start:
     mov     rdi, STDOUT
     mov     rsi, buffer
     mov     rdx, rax
-    call    sys_write
+    call    write
 
     pop     rax             ; pop fd into rax
     jmp     .read
