@@ -16,9 +16,7 @@ _start:
     pop     rdi                                             ; argv[0]
     pop     rdi                                             ; argv[1] - file to write to
 
-    mov     rsi, O_WRONLY
-    or      rsi, O_CREAT
-    or      rsi, O_TRUNC
+    mov     rsi, O_WRONLY | O_CREAT | O_TRUNC
     mov     rdx, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
     call    open
 
@@ -35,10 +33,9 @@ _start:
     push    rax
 
     ; write to STDOUT
-    pop     rdx
-    push    rdx
     mov     rdi, STDOUT
     mov     rsi, buffer
+    mov     rdx, rax
     call    write
 
     cmp     rax, NULL
