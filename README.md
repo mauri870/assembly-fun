@@ -26,3 +26,10 @@ PROGRAM=hello-world make
 ```bash
 ./test_runner.sh
 ```
+
+## Docker
+
+```bash
+docker build -t problems-assembly .
+docker run -it --rm -v $(pwd):/var/data -w /var/data problems-assembly bash
+```
