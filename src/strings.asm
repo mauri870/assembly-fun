@@ -4,6 +4,10 @@
     %include "io.asm"
 
     section .text
+    strncpy:
+        cld
+        rep movsb
+        ret
     strlen:
         mov     rax, NULL
         mov     rcx, -1
