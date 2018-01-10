@@ -1,5 +1,5 @@
 ;
-; A simple program to simulate the behavior of the GNU yes utility
+; A simple program to simulate the behavior of the GNU coreutils yes
 ;
 ; ./bin/yes | pv -r /dev/null has the same performance as the coreutils yes on my machine
 ;

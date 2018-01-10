@@ -1,5 +1,5 @@
 ;
-; A simple program to simulate the coreutils true
+; A simple program to simulate the behavior of the GNU coreutils true
 ;
 
 %include "io.asm"

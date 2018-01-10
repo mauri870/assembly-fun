@@ -1,5 +1,5 @@
 ;
-; A simple program to simulate the behavior of the GNU cat utility
+; A simple program to simulate the behavior of the GNU coreutils cat
 ;
 
 %include "io.asm"

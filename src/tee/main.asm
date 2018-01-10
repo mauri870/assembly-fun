@@ -1,5 +1,5 @@
 ;
-; A simple program to simulate the behavior of the GNU tee utility
+; A simple program to simulate the behavior of the GNU coreutils tee
 ;
 
 %include "io.asm"

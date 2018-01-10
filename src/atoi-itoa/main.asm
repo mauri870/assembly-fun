@@ -14,12 +14,14 @@ _start:
     mov     rbx, rax
 
     mov     rdi, rbx
-    call    println
+    call    print
 
     mov     rdi, rbx
     call    atoi
-
     mov     rdi, rax
+    call    printInt
+
+    mov     rdi, 0
     call    exit
 
 section .data
