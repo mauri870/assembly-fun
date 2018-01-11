@@ -1,5 +1,5 @@
 ;
-; A simple program to simulate the coreutils echo
+; A simple program to simulate the behavior of the GNU coreutils echo
 ;
 
 %include "io.asm"
