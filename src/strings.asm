@@ -8,6 +8,7 @@
         cld
         rep movsb
         ret
+
     strlen:
         mov     rax, NULL
         mov     rcx, -1

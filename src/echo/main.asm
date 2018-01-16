@@ -35,11 +35,3 @@ _start:
     .exit:
     mov     rdi, 0
     call    exit
-
-printSpace:
-    lea     rdi, [space]
-    call    print
-    ret
-
-section .data
-    space:  db 0x20
