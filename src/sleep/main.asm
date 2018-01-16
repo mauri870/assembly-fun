@@ -34,7 +34,8 @@ _start:
 section .data
     msg: db "Wake up and die", NULL
 
+section .bss
     ; https://github.com/torvalds/linux/blob/v4.14/include/uapi/linux/time.h#L10-L13
     timespec:
-        .tv_sec dw NULL                     ; long seconds
-        .tv_nsec dw NULL                    ; long nanoseconds
+        .tv_sec resw 1                     ; long seconds
+        .tv_nsec resw 1                    ; long nanoseconds
