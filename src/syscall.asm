@@ -9,6 +9,7 @@
     %define SYS_WRITE 1
     %define SYS_OPEN 2
     %define SYS_CLOSE 3
+    %define SYS_NANOSLEEP 35
     %define SYS_EXIT 60
     %define SYS_UNAME 63
 
@@ -39,6 +40,11 @@
 
     sys_close:
         mov     rax, SYS_CLOSE
+        syscall
+        ret
+
+    sys_nanosleep:
+        mov     rax, SYS_NANOSLEEP
         syscall
         ret
 
