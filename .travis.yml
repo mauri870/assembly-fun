@@ -1,7 +1,7 @@
 dist: trusty
-sudo: true
+sudo: false
 
-before_script:
+before_install:
   - sudo add-apt-repository ppa:duggan/bats -y
   - sudo apt-get update -y
   - sudo apt-get install -y make yasm bats

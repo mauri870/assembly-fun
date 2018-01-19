@@ -1,6 +1,6 @@
 @test "should run uname" {
-    run ./bin/uname
-    KERNEL=$(uname -r)
-    [ "$status" -eq 0 ]
-    [ "$output" = "Linux Kernel version: $KERNEL" ]
+    expected="$(uname -a)"
+    output="$(./bin/uname | tr -d '\0' |  rev | cut -d ' ' -f3- | rev)"
+    [ "$?" -eq 0 ]
+    [[ "$expected" == "$output"* ]]
 }

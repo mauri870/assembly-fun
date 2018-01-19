@@ -20,13 +20,18 @@
 
     println:
         call    print
-        mov     rdi, LF
+        lea     rdi, [LF]
         call    print
         ret
 
     printInt:
         call    itoa
         mov     rdi, rax
+        call    print
+        ret
+
+    printSpace:
+        lea     rdi, [SPACE]
         call    print
         ret
 
@@ -51,5 +56,6 @@
         NULL:   equ 0x0
         LN:     equ 0xA
         LF:     db LN, NULL
+        SPACE:  db 0x20
 
 %endif
