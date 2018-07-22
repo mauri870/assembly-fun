@@ -15,7 +15,7 @@ global _start
 _start:
     mov     rdi, STDOUT
     mov     rsi, buffer
-    mov     rdx, BUF_SIZE * 2
+    mov     rdx, BUF_SIZE
 
     .loop:
     call    write
