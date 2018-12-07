@@ -19,11 +19,11 @@ sudo apt-get install make yasm bats
 ```bash
 # The program is a subfolder in src/
 PROGRAM=yes make
-./bin/yes | pv -r /dev/null
+./bin/yes | pv -r > /dev/null
 [4,30GiB/s]
 
 # Same performance as GNU yes on my machine ;)
-yes | pv -r /dev/null
+yes | pv -r > /dev/null
 [4,33GiB/s]
 ```
 
