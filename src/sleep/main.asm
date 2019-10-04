@@ -4,7 +4,6 @@
 
 %include "io.asm"
 %include "time.asm"
-%include "strings.asm"
 
 section .text
 global _start
@@ -24,15 +23,9 @@ _start:
     xor     rsi, rsi                        ; remaining sleep time after interruption is written to the address pointed by rsi
     call    nanosleep
 
-    lea     rdi, [msg]
-    call    println
-
     .exit:
     xor     rdi, rdi
     call    exit
-
-section .data
-    msg: db "Wake up and die", NULL
 
 section .bss
     ; https://github.com/torvalds/linux/blob/v4.14/include/uapi/linux/time.h#L10-L13
