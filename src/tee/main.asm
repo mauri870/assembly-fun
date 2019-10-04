@@ -54,7 +54,7 @@ _start:
     mov     rdi, r8
     call    close
 
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit
 
 section .bss

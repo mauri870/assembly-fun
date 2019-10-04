@@ -41,7 +41,7 @@ _start:
     mov     rdi, rax
     call    close
 
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit
 
 section .bss

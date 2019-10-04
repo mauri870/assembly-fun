@@ -28,7 +28,7 @@ _start:
     call    println
 
     .exit:
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit
 
 section .data

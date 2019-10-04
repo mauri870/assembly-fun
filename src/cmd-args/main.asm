@@ -22,5 +22,5 @@ _start:
     jmp     .next
 
     .exit:
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit

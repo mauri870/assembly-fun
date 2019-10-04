@@ -17,7 +17,7 @@ _start:
     mov     rdi, input
     call    println
 
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit
 
 section .data
