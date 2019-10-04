@@ -48,6 +48,6 @@ _start:
     jle     .counter
 
     .exit:
-    mov     rdi, 0
+    xor     rdi, rdi
     call    exit
 
