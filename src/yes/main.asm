@@ -7,9 +7,6 @@
 %include "stat.asm"
 %include "io.asm"
 
-; Buffer size needs to be page size aligned for better performance
-%define BUF_SIZE 4096
-
 section .text
 global _start
 _start:

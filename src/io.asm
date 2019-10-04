@@ -5,6 +5,9 @@
     %include "strings.asm"
     %include "stat.asm"
 
+    ; Buffer size needs to be page size aligned for better performance
+    %define BUF_SIZE 8192
+
     section .text
     print:
         cmp     rdi, NULL
