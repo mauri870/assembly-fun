@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mauri870/problems-assembly.svg?branch=master)](https://travis-ci.org/mauri870/problems-assembly)
 
-Some problems solved in assembly Linux x64
+Some fun in assembly Linux x64
 
 ## Requirements
 
