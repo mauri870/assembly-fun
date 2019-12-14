@@ -1,6 +1,6 @@
 # Assembly Problems
 
-[![Build Status](https://travis-ci.org/mauri870/problems-assembly.svg?branch=master)](https://travis-ci.org/mauri870/problems-assembly)
+[![Build Status](https://travis-ci.org/mauri870/assembly-fun.svg?branch=master)](https://travis-ci.org/mauri870/assembly-fun)
 
 Some fun in assembly Linux x64
 
