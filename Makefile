@@ -36,3 +36,6 @@ $(BIN):
 clean:
 	-rm -r $(BUILD)
 	-rm -r $(BIN)
+
+test:
+	./test_runner.sh $(TEST)

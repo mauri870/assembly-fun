@@ -30,7 +30,10 @@ yes | pv -r > /dev/null
 ## Tests
 
 ```bash
-./test_runner.sh
+make test
+
+# to run a single test
+TEST=yes make test
 ```
 
 ## Docker
